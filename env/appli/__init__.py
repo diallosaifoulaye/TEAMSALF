@@ -20,4 +20,4 @@ login_manager = LoginManager(app)
 das = dash.Dash()
 
 login_manager.login_view = 'login'
-from fbapp import routes
+from appli import routes
