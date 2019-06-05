@@ -67,11 +67,11 @@ def worklearning():
         
         return render_template('worklearning.html')
 
-@app.route("/resultat")
+"""@app.route("/resultat")
 def resultat():
         b = pd.read_csv('/home/diallo/Documents/EDACY_workspace/Git/Projects/DATA-SCIENCE/bd.csv'
         das.layout = html.Div('yes')
-        bd=das.layout
+        bd=das
         #bd=plt.show(b.hist(bins=50, figsize=(20,15)))
         
-        return render_template('resultat.html', bd=bd)
+        return render_template('resultat.html', bd=bd)"""
