@@ -70,8 +70,8 @@ def worklearning():
 @app.route("/resultat")
 def resultat():
         b = pd.read_csv('/home/diallo/Documents/EDACY_workspace/Git/Projects/DATA-SCIENCE/bd.csv'
-        #das.layout = html.Div('yes')
-        #bd=das.layout
-        bd=plt.show(b.hist(bins=50, figsize=(20,15)))
+        das.layout = html.Div('yes')
+        bd=das.layout
+        #bd=plt.show(b.hist(bins=50, figsize=(20,15)))
         
         return render_template('resultat.html', bd=bd)
