@@ -1,0 +1,52 @@
+{% extends 'entete.html' %}
+{% block content %}
+
+<html>
+    <head>
+        <!--meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="bootstrap.css"-->
+    </head>
+    <body>
+        <br/><br/>
+        <div class="bol-sm-ofset-2 form-group">
+            <div class="col-sm-10">
+                <div align="center">
+                    
+            <table border="" cellspacing="0" align="center" class="col-lg-offset-1 table table-striped"><br/>
+               
+                <thead>
+                    <tr>
+                        <th>Identification</th>
+                        <th >Nom</th>
+                         <th >Prenom</th>
+                        <th >Email</th>
+                         <th >Option</th>
+                        <th >Action</th>
+                        <!--th >Option</th-->
+                    </tr>
+                </thead>
+                    <tbody>
+                        {% for user in c7 %}
+                        <tr>
+                            <td>{{ user.idtalent}}</td>
+                            <td>{{ user.nom}}</td>
+                            <td> {{ user.prenom}}</td>
+                            <td> {{ user.email}}</td>
+                            <td> {{ user.option}}</td>
+                            <form method="POST" action="./detail">
+                                <input type="hidden" value="{{user.idtalent}}" name="identifiant">
+                                <td><input type="submit" value="Detail"></td>
+                            </form>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+             
+
+            </table><br/><br/>
+    </body>
+</html>
+
+
+{% endblock content %}

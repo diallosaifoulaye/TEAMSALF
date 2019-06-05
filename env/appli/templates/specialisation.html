@@ -1,0 +1,55 @@
+{% extends 'entete.html' %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+</head>
+<body>
+ 
+<div class="container">
+  <h2>Talents en phase de Spécialisation</h2>
+  
+    <div class="row ">
+    <div class="panel panel-success col-lg-6">
+        <div class="panel-heading">Talents qui ne representent aucun risque</div>
+        <div class="panel-body">
+      
+         <a href="{{url_for('resultat')}}">  <img class="rounded-circle account-img" src="static/img/ad.png" width="100" height="136"/><h2>1%-20%</h2></a>
+        </div>
+     </div>
+    <div class="panel panel-warning col-lg-6">
+       <div class="panel-heading" style="color: #FFFFOO">Talents à faible risque de quitter </div>
+       <div class="panel-body">
+      
+         <img class="rounded-circle account-img" src="static/img/faible.png" width="100" height="136"/> <h2>21%-50%</h2>
+       </div>
+    </div>
+
+    <div class="row ">
+    <div class="panel panel-danger col-lg-6" style="color: #ffcc00">
+        <div class="panel-heading">Talents à moyen risque de quiter</div>
+        <div class="panel-body">
+      
+           <img class="rounded-circle account-img" src="static/img/moyen.png" width="100" height="136"/><h2>51%-75%</h2>
+        </div>
+     </div>
+    <div class="panel panel-danger col-lg-6">
+       <div class="panel-heading">Talents à haut risque de quitter</div>
+       <div class="panel-body">
+      
+        <img class="rounded-circle account-img" src="static/img/haut.jpg" width="100" height="136"/><h2>76%-100%</h2>
+       </div>
+    </div>
+
+    
+
+
+</body>
+</html>
+
+{% endblock content %}

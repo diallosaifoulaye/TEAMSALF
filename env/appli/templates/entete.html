@@ -1,0 +1,67 @@
+
+<html>
+    <head>
+       <script src="static/js/jquery/jquery.min.js"></script>
+       <script src="static/js/bootstrap/bootstrap.min.js"></script>
+       <link rel="stylesheet" href="static/css/bootstrap/bootstrap.min.css">
+       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+       <link rel="stylesheet" href="static/css/application.css">
+        
+       <script src="static/css/bootstrap/bootstrap.min.css"></script>
+        
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <div class="container">
+          
+            
+             <div class="row">
+                <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                    <div class="navbar-header">
+                        <a href="" class="navbar-brand">EDACY</a>
+                     </div><br/>
+                        <div class="navbar-collapse collapse navbar-right">
+                                       
+                            <ul class="nav navbar-nav">
+                                
+                                <li class="active"><a href="{{url_for('home')}}">Accueil</a></li>
+                                <li><a href="#">Programme</a></li>
+                                <li class="dropdown">
+                                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Liste Cohorte
+                                     <span class="caret"></span></a>
+                                     <ul class="dropdown-menu">
+                                        <li><a href="#">COHORTE 1</a></li>
+                                        <li><a href="#">COHORTE 2</a></li>
+                                        <li><a href="#">COHORTE 3</a></li>
+                                        <li><a href="#">COHORTE 4</a></li>
+                                        <li><a href="#">COHORTE 5</a></li>
+                                        <li><a href="#">COHORTE 6</a></li>
+                                        <li><a href="{{url_for('liste')}}">COHORTE 7</a></li>
+                                    </ul><!--dropdown cohorte-->
+                                </li><!--dropdown cohorte-->
+                                 <li class="dropdown">
+                                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Prediction
+                                     <span class="caret"></span></a>
+                                     <ul class="dropdown-menu">
+                                        <li><a href="{{url_for('specialisation')}}">Specialisation</a></li>
+                                        <li><a href="{{url_for('worklearning')}}">WorkLearning</a></li>
+                                     </ul><!--ul dropdown prediction-->
+                                </li><!--li dropdown -->  
+                                
+                           
+                        {% if current_user.is_authenticated %} 
+                               <li><a href="{{url_for('account')}}">Account</a></li>
+                               <li><a href="{{url_for('logout')}}">Logout</a></li>
+                          
+                           
+                        {% endif %}
+                                
+                               
+                            </ul><!--menu-->
+                        </div><!--Menu-->
+                    </nav><!-- end nav-->
+                </div><!--entete-->
+             </div>
+    </body>
+</html>
+{% block content %}{% endblock %}

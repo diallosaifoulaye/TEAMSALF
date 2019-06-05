@@ -1,0 +1,41 @@
+{% extends 'entete.html' %}
+{% block content %}
+
+<html>
+    <head>
+        <!--meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="bootstrap.css"-->
+    </head>
+    <body>
+            <div class="bol-sm-ofset-2 form-group">
+            <div class="col-sm-10">
+                <div align="center">
+                    
+                   <table  cellspacing="0" align="center" class="col-lg-offset-2  table table-striped"><br/>
+
+                   
+                    <tr><td>Phase</td> </td>  <td>{{ c1.phase}}</td>
+                    <tr><td>Nom</td> </td>  <td>{{ c1.nom}}</td></tr>
+                    <td>Prenom</td> </td>  <td>{{ c1.prenom}}</td> </tr>
+                    </tr><td>Email</td> </td>  <td>{{ c1.email}}</td> </tr>
+                    <td>option</td> </td>  <td>{{ c1.option}}</td> </tr>
+                    <td>Tp Total</td> </td>  <td> {{ c1.tptotal}}</td> </tr> 
+                    <td>Tp fait</td> </td>  <td> {{ c1.tpfait}}</td> </tr> 
+                    <td>Total Makersday</td> </td>  <td>{{ c1.totalmakersday}}</td> </tr>
+                    <td>Absence Makersday</td> </td>  <td>{{ c1.abscencemakersday}}</td> </tr> 
+                    <td>Total quiz</td> </td>  <td> {{ c1.totalquiz}}</td> </tr> 
+                    <td>Quiz fait</td> </td>  <td>{{ c1.quizfait }}</td> </tr> 
+                    <td>Mois non paye</td> </td>  <td>{{ c1.moisnonpaye}}</td> </tr>
+                                        
+                            
+                </table>      
+             
+
+           
+    </body>
+</html>
+
+
+{% endblock content %}
