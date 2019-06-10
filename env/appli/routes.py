@@ -8,6 +8,8 @@ import dash
 import dash_core_components as dcc
 import dash_html_components as html
 import matplotlib.pyplot as plt
+import plotly.graph_objs as go
+
 
 
 
@@ -69,9 +71,18 @@ def worklearning():
 
 """@app.route("/resultat")
 def resultat():
+<<<<<<< HEAD
         b = pd.read_csv('/home/diallo/Documents/EDACY_workspace/Git/Projects/DATA-SCIENCE/bd.csv'
         das.layout = html.Div('yes')
         bd=das
         #bd=plt.show(b.hist(bins=50, figsize=(20,15)))
         
         return render_template('resultat.html', bd=bd)"""
+=======
+       
+       
+        return render_template('resultat.html')
+
+
+        
+>>>>>>> saifon
